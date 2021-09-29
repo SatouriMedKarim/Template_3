@@ -54,6 +54,31 @@ html {
 }
 /* Variables ends */
 
+/* Components starts*/
+.main-heading {
+    text-align: center;
+    margin-bottom: var(--padding_section);
+    font-size: 35px;
+    color: var(--main_color);
+}
+.main-heading span {
+    background-color: rgba(255, 165, 0, 0.2);
+    text-transform: uppercase;
+    padding: 0 5px;
+    margin-left: 3px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+@media(max-width: 768px) {
+    .main-heading {
+        font-size: 25px
+    }
+}
+/* Components ends*/
+
 /* Header section starts */
 header {
     position: sticky;
@@ -154,7 +179,7 @@ header .container .search-user i.fa-user {
     position: relative;
 }
 .landing video {
-    height: calc(100vh - 69px);
+    height: calc(100vh - 70px);
     object-fit: cover;
     width: 100%;
 }
@@ -264,4 +289,60 @@ header .container .search-user i.fa-user {
     }
 }
 /* Landing ends */
+
+/* Book-now section starts */
+.book-now {
+    padding-top: var(--padding_section);
+    padding-bottom: var(--padding_section);    
+}
+.book-now .book-now-content {
+    display: flex;
+    align-items: center;
+}
+.book-now .book-now-content .book-now-img {
+    flex-basis: 50%;
+}
+.book-now .book-now-content form {
+    flex-basis: 50%;
+    padding: 40px 15px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .2);
+}
+.book-now .book-now-content form .input-zone {
+    margin-bottom: 20px;
+}
+.book-now .book-now-content form .input-zone h3 {
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.book-now .book-now-content form .input-zone input {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 100%;
+}
+.book-now .book-now-content form .input-zone input::placeholder {
+    text-transform: lowercase;
+}
+.book-now .book-now-content form .input-zone input[type="date"] {
+    color: #666;
+}
+.book-now .book-now-content form input[type="submit"] {
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 25px;
+    background-color: rgb(255, 165, 0);
+}
+@media(max-width: 768px){
+    .book-now .book-now-content {
+        flex-direction: column;
+    }
+    .book-now .book-now-content form {
+        width: 100%;
+    }
+    .book-now .book-now-content .book-now-img {
+        display: none;
+    }
+}
+/* Book-now section ends */
+
 
