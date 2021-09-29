@@ -74,8 +74,15 @@ html {
 }
 @media(max-width: 768px) {
     .main-heading {
-        font-size: 25px
+        font-size: 25px;
+        font-weight: 600;
     }
+}
+input[type="submit"] {
+    font-size: 18px;
+    color: #fff;
+    padding: 10px 25px;
+    background-color: rgb(255, 165, 0);
 }
 /* Components ends*/
 
@@ -305,7 +312,7 @@ header .container .search-user i.fa-user {
 .book-now .book-now-content form {
     flex-basis: 50%;
     padding: 40px 15px;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);
 }
 .book-now .book-now-content form .input-zone {
     margin-bottom: 20px;
@@ -326,12 +333,6 @@ header .container .search-user i.fa-user {
 .book-now .book-now-content form .input-zone input[type="date"] {
     color: #666;
 }
-.book-now .book-now-content form input[type="submit"] {
-    font-size: 18px;
-    color: #fff;
-    padding: 10px 25px;
-    background-color: rgb(255, 165, 0);
-}
 @media(max-width: 768px){
     .book-now .book-now-content {
         flex-direction: column;
@@ -344,5 +345,99 @@ header .container .search-user i.fa-user {
     }
 }
 /* Book-now section ends */
+
+/* packages section starts */
+.packages .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.packages .container .package-box {
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.packages .container .package-box img {
+    width: 100%;
+}
+.packages .container .package-box .box-text {
+    padding: 15px;
+}
+.packages .container .package-box .box-text h3.place {
+    color: #333;
+}
+.packages .container .package-box .box-text h3.place::before {
+    content: "\f3c5";
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    color: var(--main_color);
+    margin-right: 5px;
+}
+.packages .container .package-box .box-text p {
+    color: #666;
+    margin: 10px 0 5px;
+}
+.packages .container .package-box .box-text .evaluation i {
+    color: var(--main_color);
+}
+.packages .container .package-box .box-text h3.price {
+    margin: 10px 0 0;
+    font-weight: normal;
+    color: #333;
+}
+.packages .container .package-box .box-text h3.price::after {
+    content: attr(first_price);
+    color: #666;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.packages .container .package-box .box-text a {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    background-color: var(--main_color);
+    padding: 8px 15px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/* packages section ends */
+
+/* services section starts */
+.services {
+    padding-top: var(--padding_section);
+    padding-bottom: var(--padding_section);
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.services .container .service-box {
+    text-align: center;
+    padding: 15px;
+}
+.services .container .service-box:hover {
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 10%);;
+}
+.services .container .service-box i {
+    color: var(--main_color);
+    font-size: 40px;
+}
+.services .container .service-box h3 {
+    color: #666;
+    margin: 10px 0;
+}
+.services .container .service-box p {
+    font-size: 14px;
+    color: #777;
+}
+/* services section ends */
 
 
